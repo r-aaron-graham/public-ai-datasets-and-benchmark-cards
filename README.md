@@ -28,8 +28,13 @@ pip install -r requirements.txt
 python benchmarks/sentiment_benchmark.py --data data/sentiment_dataset.csv
 ```
 
-The script trains a simple logistic regression classifier and reports
-accuracy on a hold‑out set.
+The script trains a logistic regression classifier and compares accuracy
+against the majority label on the same stratified hold-out split. The bundled
+fixture has six synthetic reviews, with four used for training and two held
+out. In the verified run, the classifier scored 0.00 and the majority baseline
+scored 0.50. This tiny dataset demonstrates the evaluation workflow.
+
+[Dataset card](data_cards/sentiment_dataset.md)
 
 ## Extending
 
